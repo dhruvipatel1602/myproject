@@ -1,0 +1,119 @@
+<!-- logout_page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout :-)</title>
+    <!-- Add your CSS links and other head elements here -->
+    <style>
+        body {
+            background-image: {% if login_page_data.image1 %}url("{{ login_page_data.image1.url }}"){% endif %}; /* Replace with the actual path to your image file */
+            width:1000px;
+            height:90px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-shadow: 2px 2px 5px red;
+        }
+        ::placeholder {
+        color: #531963;
+        opacity: 1;
+        }
+        .button {
+        width: 153%;
+        height: 30px;
+        display: inline-block;
+        padding: 15px 25px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #531963;
+        background-color: #ffc4d4;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #F88379;
+        }
+        .button:hover {background-color: #ffc4d4}
+        .button:active {
+        background-color: #ffc4d4;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        }
+        .myDiv2 {
+        box-shadow: 0px 0px 15px currentcolor;
+        border: 5px solid currentcolor;
+        border: 5px outset #ffc4d4;
+        border-radius: 15px 50px;
+        text-align: center;
+        position: right;
+        width: 300px;
+        padding: 60px;
+        margin-left: 450px;
+        margin-top: 40px;
+        }
+    </style>
+</head>
+<body bgcolor="ffc3aa">
+        {% for message in messages  %}
+        <strong style="font-size:20px; margin-left:20px;margin-right:20px;font-family: Times New Roman; text-align:center;color:red;">Message :  {{ message }} </strong>
+        {% endfor %}
+        <br>
+        <br>
+        <div class="myDiv2">
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <h1><p style="font-family:Georgia;color:#531963;text-align:center;">{{ lo_page_data.title1 }}</p></h1>
+            <br>
+            <form id="logoutForm" method="post" action="{% url 'logoutPage' %}">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                 <td><label for="uid" >{{ lo_page_data.text1 }}</label></td>
+                <td><input type="text" id="uid" name="uid" required></td>
+             </tr>
+             <tr>
+                 <td><label for="feedback">{{ lo_page_data.text2 }}</label></td>
+                <td><textarea id="feedback" name="feedback" required></textarea></td>
+             </tr>
+             <tr></tr>
+             <tr></tr>
+             <tr></tr>
+             <tr></tr>
+             <tr></tr>
+             <tr>
+                 <td><button type="submit">Logout</button></td>
+             </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            var modal = document.getElementById('logoutModal');
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('logoutModal');
+            modal.style.display = 'none';
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById('logoutModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+    </script>
+        </div>
+
+    <!-- Add your JavaScript code here if needed -->
+
+</body>
+</html>

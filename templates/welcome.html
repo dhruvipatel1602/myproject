@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5; url={% url 'login' %}">
+    <title>Welcome  :-)</title>
+</head>
+<body bgcolor="ffc3aa">
+<br><br><br><br>
+<br><br><br><br>
+<br>
+{% if welcome_page_data.image1 %}
+<img src="{{ welcome_page_data.image1.url }}" alt="my image" style="width:20%; height:20%; margin-left:540px;">
+{% endif %}
+</body>
+</html>
