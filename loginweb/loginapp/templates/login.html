@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="subContainer">
+                <div class="left">
+                    <h1>Login</h1>
+                    <form  action="{% static '/welcome.html' %}">
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" placeholder="username@gmail.com" id="email">
+                        </div>
+                        <div class="field">
+                            <label for="paasword">Password</label>
+                            <input type="password" name="password" placeholder="Password" id="password">
+                            <a class="forgot" href="#">Forgot Password?</a>
+                        </div>
+                        <div class="button">
+                            <button>Sign in</button>
+                        </div>
+                        <div class="continue">
+                            <span>Or Continue With</span>
+                            <div class="logos">
+                                <img src="{% static 'google.png' %}" alt="Google">
+                                <img src="{% static 'git.png' %}" alt="Github">
+                                <img src="{% static 'face.png' %}" alt="Facebook">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="register">
+                        Don't have and account yet? <a href="#">Register for free</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="{% static 'side.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

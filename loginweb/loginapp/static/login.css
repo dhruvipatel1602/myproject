@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+}
+
+body {
+    background: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.subContainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.left {
+    background-color: #ffdfc8;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.left>h1 {
+    color: #F25019;
+    margin-bottom: 20px;
+}
+
+.right {
+    width: 50%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field input {
+    width: 123%;
+    border-style: none;
+    height: 34px;
+    border-radius: 4px;
+    gap: 4px;
+    margin-bottom: 12px;
+    padding: 2px;
+}
+
+.field input::placeholder {
+    position: relative;
+    left: 10px;
+}
+
+.forgot {
+    text-decoration: none;
+    color: #F25019;
+    position: relative;
+    left: 133px;
+    margin-bottom: 19px;  
+    cursor: pointer;
+}
+
+.button button {
+    width: 123%;
+    height: 28px;
+    background-color: #F25019;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.continue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    position: relative;
+    left: 31px;
+}
+
+.continue span {
+    font-weight: 100;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.logos img{
+    cursor: pointer;
+}
+.register{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 20px;
+}
+.register a{
+    text-decoration: none;
+    color: #F25019;
+}
